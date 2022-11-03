@@ -19,7 +19,8 @@ const UserBlog = () => {
       {" "} 
       {user && user.blogs && 
       user.blogs.map((blog,index) => (
-      <Blog 
+      <Blog
+      id={blog._id} 
       key={index}
       isUser={true}
       title={blog.title} 

@@ -8,7 +8,8 @@ const authSlice = createSlice({
             state.isLoggedIn = true
         }, 
         logout(state) {
-            state.isLoggedIn = false
+            localStorage.removeItem("userId");
+            state.isLoggedIn = false;
         },     
     },
 });
@@ -17,4 +18,4 @@ export const authActions = authSlice.actions
 
 export const store = configureStore({
     reducer: authSlice.reducer
-})
+});

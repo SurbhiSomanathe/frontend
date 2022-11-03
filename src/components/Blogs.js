@@ -18,7 +18,7 @@ const Blogs = () => {
    console.log(blogs);
   return (
     <div>      
-      {blogs && blogs.map((blog,index) => (
+      {blogs && blogs.map((blog, index) => (
         <Blog 
         id={blog._id}
         isUser={localStorage.getItem("userId")===blog.user._id}
